@@ -10,13 +10,13 @@
 function interf = interferences(wns, powerMatrix)
 % Interferences - Returns the interferences power received at each WLAN
 %   OUTPUT:
-%       * intMat: 1xN array (N is the number of WLANs) with the
+%       - interf: 1xN array (N is the number of WLANs) with the
 %       interferences noticed on each AP in mW
 %   INPUT:
-%       * wlans: contains information of each WLAN in the map. For instance,
-%       wlans(1) corresponds to the first one, so that it has unique
-%       parameters (x,y,z,BW,CCA,etc.).
-%       * powMat: matrix NxN (N is the number of WLANs) with the power
+%       - wns: contains information of each Wireless Network in the map. 
+%       For instance, wns(1) corresponds to the first WN, so that it has 
+%       unique parameters (position_ap, position_sta, txPower, etc.).
+%       - powerMatrix: matrix NxN (N is the number of WLANs) with the power
 %       received at each AP in dBm.
 
 % We assume that overlapping channels also create an interference with lower level (20dB/d) - 20 dB == 50 dBm

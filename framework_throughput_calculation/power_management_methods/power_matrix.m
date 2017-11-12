@@ -13,9 +13,9 @@ function powerMatrix = power_matrix(wns)
 %       - powMat: matrix NxN (N is the number of WLANs) with the power
 %       received at each AP in dBm
 %   INPUT:
-%       - wns: contains information of each WLAN in the map. For instance,
-%       wlan(1) corresponds to the first one, so that it has unique
-%       parameters (x,y,z,BW,CCA,etc.)
+%       - wns: contains information of each Wireless Network in the map. 
+%       For instance, wns(1) corresponds to the first WN, so that it has 
+%       unique parameters (position_ap, position_sta, txPower, etc.).
 
     
     PLd1=5;                     % Path-loss factor

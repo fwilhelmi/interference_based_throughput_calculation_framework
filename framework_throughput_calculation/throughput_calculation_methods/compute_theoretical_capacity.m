@@ -8,7 +8,7 @@
 %%% ***********************************************************************************
 
 function C = compute_theoretical_capacity(B, sinr)
-% Computes the theoretical capacity given a bandwidth and a SINR
+% Computes the theoretical capacity given the bandwidth and SINR
 %
 % OUTPUT:
 %   * C - capacity in bps

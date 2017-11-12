@@ -17,7 +17,9 @@ function throughputPerConfiguration = compute_throughput_all_combinations( wns )
 % OUTPUT:
 %   * throughputPerConfiguration - tpt achieved by each WN for each configuration (Mbps)
 % INPUT:
-%   * wns - object containing all the WLANs information 
+%   * wns: contains information of each Wireless Network in the map. 
+%   For instance, wns(1) corresponds to the first WN, so that it has 
+%   unique parameters (position_ap, position_sta, txPower, etc.).
 
     load('constants.mat')
 
@@ -52,6 +54,7 @@ function throughputPerConfiguration = compute_throughput_all_combinations( wns )
         prop_fairness(i) = sum(log(throughputPerConfiguration(i,:)));
     end    
     
+    %% Dsiplay configurations maximizing prop. fairness and agg. throughput
     disp('---------------')
     fprintf('Configuration that maximizes proportional fairness:\n\n')
     [val, ix] = max(prop_fairness);
